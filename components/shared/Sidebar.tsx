@@ -47,7 +47,7 @@ function Sidebar() {
             })}
           </ul>
           <ul className="sidebar-nav_elements">
-            {navLinks.slice(6).map((ele, ix) => {
+            {navLinks.slice(6).map((ele) => {
               const isActive: boolean = ele.route === pathname;
               return (
                 <li

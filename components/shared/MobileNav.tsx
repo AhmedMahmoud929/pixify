@@ -5,19 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
-import { MenuIcon } from "lucide-react";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { navLinks } from "@/constants";
 import { usePathname } from "next/navigation";
 
@@ -55,7 +43,7 @@ function MobileNav() {
               height={28}
             />
             <ul className="header-nav_elements">
-              {navLinks.map((ele, ix) => {
+              {navLinks.map((ele) => {
                 const isActive: boolean = ele.route === pathname;
                 return (
                   <li
